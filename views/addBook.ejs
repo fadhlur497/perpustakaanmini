@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Book</h1>
+    <% if(errors){ %>
+        <% errors=errors.split(',') %>
+            <% errors.forEach((el)=> { %>
+                <p style="color: red;">
+                    <%= el %>
+                </p>
+                <% }) %>
+                    <% } %>
+    <form action="" method="post">
+        title: <input type="text" name="title"><br>
+        level: <select name="level" id="">
+            <option selected disabled>--select Book--</option>
+            <option value="Basic">Basic</option>
+            <option value="Intermediate">intermediate</option>
+            <option value="Advance">Advance</option>
+        </select><br>
+        Publish Year: <input type="number" name="publishYear"><br>
+        Author: <select name="profileId" id="">
+            <option selected disabled>Choose</option>
+            <% data.forEach((el) => { %>
+                <option value="<%= el.id %>"><%=`${el.firstName} ${el.lastName}`%></option>
+                <% }) %>
+            </select><br> 
+        description: <br><textarea name="description" id="" cols="165" rows="30"></textarea><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% if (deletes) { %>
+        <%  let splitted = deletes.split(",") %>
+        <h5 style="color:red;"><%= `Book with title ${splitted[0]} has been removed`%></h5>
+    <% } %>
+    <center>
+        <form method="get" action="/book">
+            <button>All</button>
+            <button type="submit" name="filter" value="Basic">Basic</button>
+            <button type="submit" name="filter" value="Intermediate">Intermediate</button>
+            <button type="submit" name="filter" value="Advance">Advance</button>
+        </form>
+        <h1>List Books</h1>
+        <a href="/book/add"><button>Add Book</button></a><br>
+        <form action="/book" method="get">
+            <input type="text" name="search">
+            <input type="submit" value="Search">
+        </form>
+        <br>
+        <table border="1" style="width: 700px; height: 200px;">
+            <tr style="background-color: rgb(141, 143, 245);">
+                <center>
+
+                    <th>Title</th>
+                    <th>Level</th>
+                    <th>Code</th>
+                    <th>Publish</th>
+                    <th>Author</th>
+                    <th>Action</th>
+                </center>
+            </tr>
+            <% data.forEach((el)=> { %>
+                <tr style="text-align: center;">
+                    <center>
+                        <td>
+                            <%= el.title %>
+                        </td>
+                        <td>
+                            <%= el.level %>
+                        </td>
+                        <td>
+                            <%= el.code %>
+                        </td>
+                        <td>
+                            <%= el.publishYear %>
+                        </td>
+                        <td>
+                            <%= el.Profile.firstName+" "+el.Profile.lastName %></td>
+                    <td>
+                        <a href=" /book/<%=el.id %>"><button style="background-color: rgb(223, 246, 130);">Read</button></a>
+                                <a href="/book/<%= el.id %>/edit"><button style="background-color: rgb(248, 125, 205);">Edit</button></a>
+                                <a href="/book/<%= el.id %>/delete"><button style="background-color: rgb(250, 130, 130);">Delete</button></a>
+                        </td>
+
+                    </center>
+                </tr>
+                <% }) %>
+        </table><br>
+        <a href="/logout"><button style="background-color: rgb(230, 142, 43);">Logout</button></a>
+    </center>
+</body>
+
+</html>

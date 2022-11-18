@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Book</h1>
+    <% if(errors){ %>
+        <% errors=errors.split(',') %>
+            <% errors.forEach((el)=> { %>
+                <p style="color: red;">
+                    <%= el %>
+                </p>
+                <% }) %>
+                    <% } %>
+    <form action="/book/<%= data.id %>/edit" method="post">
+        title: <input type="text" name="title" value="<%= data.title %>"><br>
+        level: <select name="level" id="">
+            <option value="Basic" <%= 'Basic' == data.level ? 'selected' : '' %>>Basic</option>
+            <option value="Intermediate" <%= 'Intermediate' == data.level ? 'selected' : '' %>>Intermediate</option>
+            <option value="Advance" <%= 'Advance' == data.level ? 'selected' : '' %>>Advance</option>
+        </select><br>
+        Publish Year: <input type="number" name="publishYear" value="<%= data.publishYear %>"><br>
+        description: <br><textarea name="description" id="" cols="165" rows="30"><%= data.description %></textarea><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

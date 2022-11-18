@@ -1,0 +1,29 @@
+[
+    {
+        "id" : 1,
+        "title" : "Algoritma",
+        "level" : "Basic",
+        "code" : "B-2010",
+        "publishYear" : 2010,
+        "description" : "Algoritma adalah metode atau langkah yang direncanakan secara tersusun dan berurutan untuk menyelesaikan atau memecahkan permasalahan dengan sebuah intruksi atau kegiatan",
+        "profileId" : 1
+    },
+    {
+        "id" : 2,
+        "title" : "OOP",
+        "level" : "Intermediate",
+        "code" : "I-1998",
+        "description" : "OOP adalah singkatan dari Object Oriented Programming, yaitu suatu metode pemrograman yang fokus atau berorientasi pada objek. Tujuan dari dirancangnya OOP adalah membantu para developer dalam mengembangkan model yang sudah ada di kehidupan sehari-hari.",
+        "publishYear" : 1998,
+        "profileId" : 1
+    },
+    {
+        "id" : 3,
+        "title" : "React",
+        "level" : "Advance",
+        "code" : "A-2015",
+        "description": "React JS adalah library JavaScript yang biasa digunakan saat membangun UI suatu website atau aplikasi web. ",
+        "publishYear" : 2015,
+        "profileId" : 1
+    }
+]

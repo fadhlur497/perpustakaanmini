@@ -1,0 +1,18 @@
+[
+    {
+        "id" : 1,
+        "firstName" : "fadhlur",
+        "lastName" : "rahman",
+        "gender" : "Female",
+        "profilePicture" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9bCOP569DuHSuQrWKvrpkARKViiqKPsg6qA&usqp=CAU",
+        "userId" : 1
+    },
+    {
+        "id" : 2,
+        "firstName" : "muhammad",
+        "lastName" : "akbar",
+        "gender" : "Female",
+        "profilePicture" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Lionel_Messi_20180626.jpg/640px-Lionel_Messi_20180626.jpg",
+        "userId" : 2
+    }
+]

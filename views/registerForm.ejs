@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>DAFTAR</h1>
+    <hr>
+    <center>
+
+        <table border="1">
+            <% if (errors) { %>
+                <% errors.split(',').forEach(x=> { %>
+                    <div style="color:red">
+                        <%= x %>
+                    </div>
+                    <% }) %>
+                        <% } %>
+                        <td>
+    
+                            <form action="/register" method="post" style="margin: 25px;">
+                                Username: <input name="userName"><br>
+                                Email address: <input name="email" type="email"><br>
+                                Password: <input name="password" type="password"><br>
+                                Role:
+                                <select name="role" id="">
+                                    <option selected disabled>Choose</option>
+                                    <option value="User">User</option>
+                                    <option value="Admin">Admin</option>
+                                </select><br><br>
+                                <button type="submit" style="background-color: rgb(141, 143, 245);">Submit</button>
+                            </form>
+                        </td>
+                            <br>
+                        </table>
+    </center><br>
+                    <a href="/login">Already have an acoount? Click Here</a>
+</body>
+
+</html>

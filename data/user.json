@@ -1,0 +1,16 @@
+[
+    {
+        "id" : 1,
+        "userName" : "fadhlur123",
+        "email" : "fadhlur@gmail.com",
+        "password" : "French",
+        "role" : "admin"
+    },
+    {
+        "id" : 2,
+        "userName" : "akbar123",
+        "email" : "akbar@gmail.com",
+        "password" : "Gallia",
+        "role" : "user"
+    }
+]
