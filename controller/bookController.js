@@ -61,7 +61,7 @@ class Controller{
     }
     static detailBook(req, res){
         const id = req.params.id
-        const input_text = `http://localhost:3000/book/${req.params.id}`
+        const input_text = `https://perpustakaanmini-fadhlurrahman.up.railway.app//book/${req.params.id}`
         qrcode.toDataURL(input_text, (err, src) => {
             if (err) res.send("Something went wrong!!");
         Book.findByPk(id, {
